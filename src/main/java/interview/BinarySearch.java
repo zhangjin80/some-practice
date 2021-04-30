@@ -1,4 +1,4 @@
-package main.interview;
+package interview;
 
 public class BinarySearch {
 

@@ -1,4 +1,4 @@
-package main.interview;
+package interview;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

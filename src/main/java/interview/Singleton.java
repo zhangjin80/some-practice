@@ -1,3 +1,5 @@
+package interview;
+
 public class Singleton {
     private volatile static Singleton single;
 
