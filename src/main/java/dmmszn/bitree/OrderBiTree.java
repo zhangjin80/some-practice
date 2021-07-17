@@ -10,9 +10,10 @@ public class OrderBiTree {
      *
      * @param head
      */
-    public static void posOrderNoRecur(TreeNode head) {
+    public List<Integer> posOrderNoRecur(TreeNode head) {
+        ArrayList<Integer> re = new ArrayList<>();
         if (head == null) {
-            return;
+            return re;
         }
         Stack<TreeNode> stackIn = new Stack<>();
         Stack<TreeNode> stackOut = new Stack<>();
@@ -29,8 +30,9 @@ public class OrderBiTree {
         }
         while (!stackOut.isEmpty()) {
             TreeNode cur = stackOut.pop();
-            System.out.println(cur.val);
+            re.add(cur.val);
         }
+        return re;
     }
 
     /**
@@ -38,9 +40,11 @@ public class OrderBiTree {
      *
      * @param head
      */
-    public static void inOrderNoRecur(TreeNode head) {
+    public List<Integer> inOrderNoRecur(TreeNode head) {
+        ArrayList<Integer> re = new ArrayList<>();
+
         if (head == null) {
-            return;
+            return re;
         }
         Stack<TreeNode> stack = new Stack<>();
         while (!stack.isEmpty() || head != null) {
@@ -49,10 +53,11 @@ public class OrderBiTree {
                 head = head.left;
             } else {
                 head = stack.pop();
-                System.out.println(head.val);
+                re.add(head.val);
                 head = head.right;
             }
         }
+        return re;
     }
 
 
@@ -61,15 +66,16 @@ public class OrderBiTree {
      *
      * @param head
      */
-    public static void preOrderNoRecur(TreeNode head) {
+    public List<Integer> preOrderNoRecur(TreeNode head) {
+        ArrayList<Integer> re = new ArrayList<>();
         if (head == null) {
-            return;
+            return re;
         }
         Stack<TreeNode> stack = new Stack<>();
         stack.add(head);
         while (!stack.isEmpty()) {
             TreeNode cur = stack.pop();
-            System.out.println(cur.val);
+            re.add(cur.val);
             if (cur.right != null) {
                 stack.push(cur.right);
             }
@@ -77,15 +83,16 @@ public class OrderBiTree {
                 stack.push(cur.left);
             }
         }
+        return re;
     }
 
-    public static List<Integer> preOrder(TreeNode head) {
+    public List<Integer> preOrder(TreeNode head) {
         ArrayList<Integer> re = new ArrayList<>();
         preOrder(re, head);
         return re;
     }
 
-    private static void preOrder(List<Integer> re, TreeNode head) {
+    private void preOrder(List<Integer> re, TreeNode head) {
         if (head == null) {
             return;
         }
@@ -93,19 +100,4 @@ public class OrderBiTree {
         preOrder(re, head.left);
         preOrder(re, head.right);
     }
-
-
-    public static void main(String[] args) {
-        /*TreeNode left = new TreeNode(1);
-        TreeNode right = new TreeNode(2);
-        TreeNode rr = new TreeNode(9);
-        right.right = rr;
-        TreeNode root = new TreeNode(0);
-        root.left = left;
-        root.right = right;*/
-        Integer[] arr = {1, 2, 3, null, 5, null, 7};
-        TreeNode node = TreeNode.createBinaryTreeByArray(arr);
-        posOrderNoRecur(node);
-    }
-
 }
