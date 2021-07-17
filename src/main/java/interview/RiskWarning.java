@@ -8,7 +8,8 @@ import java.util.HashMap;
 /**
  * 方法1. 接收一条数据为参数，orgid timestamp
  * 实现：
- *  同一个orgId在一秒钟内（updated_at）出现次数超过50次记为一次风险，(（time-orgid）,count) if count > 50 (（time-orgid）,fx+1)
+ *  同一个orgId在一秒钟内（updated_at）出现次数超过50次记为一次风险，
+ *  (（time-orgid）,count) if count > 50 (（time-orgid）,fx+1)
  *  如果在连续的60秒内风险次数大于40次，打印：{orgId}异常活跃
  *      for(time-1) 拿到每个时间点的orgid和对应的风险计数聚合，如过这个orgid大于40次就报警
  */
