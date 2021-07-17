@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @Author jihua.chai
- * @Description 
+ * @Description
  * @Date 2021/6/24 下午8:16
  **/
 public class SolutionWarning {
