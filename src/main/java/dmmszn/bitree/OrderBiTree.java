@@ -1,16 +1,85 @@
 package dmmszn.bitree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class OrderBiTree {
+    /**
+     * 给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。
+     * 示例：
+     * 二叉树：[3,9,20,null,null,15,7],
+     * <p>
+     * 3
+     * / \
+     * 9  20
+     * /  \
+     * 15   7
+     * 返回其层序遍历结果：
+     * <p>
+     * [
+     * [3],
+     * [9,20],
+     * [15,7]
+     * ]
+     */
+    public List<List<Integer>> levelOrder2(TreeNode head) {
+        List<List<Integer>> re = new ArrayList<>();
+
+        if (head == null) {
+            return re;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(head);
+        while (!queue.isEmpty()) {
+            ArrayList<Integer> curLevelRes = new ArrayList<>();
+            int curLevelSize = queue.size();
+            for (int i = 0; i < curLevelSize; i++) {
+                TreeNode cur = queue.poll();
+                curLevelRes.add(cur.val);
+                if (cur.left != null) {
+                    queue.offer(cur.left);
+                }
+                if (cur.right != null) {
+                    queue.offer(cur.right);
+                }
+            }
+            re.add(curLevelRes);
+
+        }
+
+        return re;
+    }
+
+    /**
+     * 层序遍历
+     */
+    public List<Integer> levelOrder(TreeNode head) {
+        List<Integer> re = new ArrayList<>();
+
+        if (head == null) {
+            return re;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(head);
+        while (!queue.isEmpty()) {
+            TreeNode cur = queue.poll();
+            re.add(cur.val);
+            if (cur.left != null) {
+                queue.offer(cur.left);
+            }
+            if (cur.right != null) {
+                queue.offer(cur.right);
+            }
+        }
+        return re;
+
+    }
+
     /**
      * 非递归后序遍历
      *
      * @param head
      */
-    public List<Integer> posOrderNoRecur(TreeNode head) {
+    public List<Integer> posOrderUnRecur(TreeNode head) {
         ArrayList<Integer> re = new ArrayList<>();
         if (head == null) {
             return re;
@@ -40,7 +109,7 @@ public class OrderBiTree {
      *
      * @param head
      */
-    public List<Integer> inOrderNoRecur(TreeNode head) {
+    public List<Integer> inOrderUnRecur(TreeNode head) {
         ArrayList<Integer> re = new ArrayList<>();
 
         if (head == null) {
@@ -66,7 +135,7 @@ public class OrderBiTree {
      *
      * @param head
      */
-    public List<Integer> preOrderNoRecur(TreeNode head) {
+    public List<Integer> preOrderUnRecur(TreeNode head) {
         ArrayList<Integer> re = new ArrayList<>();
         if (head == null) {
             return re;
