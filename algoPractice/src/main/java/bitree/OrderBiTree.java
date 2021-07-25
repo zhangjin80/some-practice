@@ -1,4 +1,4 @@
-package dmmszn.bitree;
+package bitree;
 
 import java.util.*;
 
