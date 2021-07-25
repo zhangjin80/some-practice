@@ -1,4 +1,4 @@
-package dmmszn.bitree;
+package bitree;
 
 public class TreeNode {
     public int val;
