@@ -1,8 +1,11 @@
-package interview;
+package sort;
 
 import java.util.Arrays;
 
-public class QIOuSort {
+/**
+ * 奇数偶数互换
+ */
+public class OddEvenSort {
     public static void sort(int[] arr) {
         int i = 0;
         int j = arr.length-1;

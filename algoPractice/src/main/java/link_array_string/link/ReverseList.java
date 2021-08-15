@@ -1,5 +1,8 @@
-package practice;
+package link_array_string.link;
 
+/**
+ * 反转链表
+ */
 public class ReverseList {
     static class ListNode{
         int val;

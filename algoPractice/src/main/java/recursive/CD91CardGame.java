@@ -5,7 +5,7 @@ package recursive;
  * @date 2021-08-08 13:04
  * CD91 排成一条线的纸牌博弈问题
  */
-public class CD91 {
+public class CD91CardGame {
     public static void main(String[] args) {
         int[] arr = {1, 2, 100, 200,300,100, 4};
         System.out.println(getMaxScore(arr));

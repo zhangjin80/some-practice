@@ -1,4 +1,4 @@
-package interview;
+package link_array_string;
 
 /**
  * 给定一个数组，如 [2,4,5,1,7,8,9]

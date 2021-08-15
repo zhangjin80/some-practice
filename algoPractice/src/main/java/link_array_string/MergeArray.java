@@ -1,4 +1,4 @@
-package interview;
+package link_array_string;
 
 import java.util.ArrayList;
 import java.util.Arrays;

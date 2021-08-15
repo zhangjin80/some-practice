@@ -1,4 +1,4 @@
-package jzoffer;
+package link_array_string;
 
 /**
  * 把字符串前n位的子串移动到末尾

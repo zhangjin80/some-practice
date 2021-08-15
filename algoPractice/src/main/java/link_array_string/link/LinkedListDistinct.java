@@ -1,8 +1,10 @@
-package practice;
+package link_array_string.link;
 
 /**
  * @author zhangjin
  * @date 2021/8/14 10:52 上午
+ * @description 链表中存在重复元素，就去重
+ * @source 一点资讯
  */
 
 public class LinkedListDistinct {

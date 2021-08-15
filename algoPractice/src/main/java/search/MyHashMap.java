@@ -1,4 +1,4 @@
-package practice;
+package search;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

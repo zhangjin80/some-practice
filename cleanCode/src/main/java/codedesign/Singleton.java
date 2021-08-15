@@ -1,4 +1,4 @@
-package interview;
+package codedesign;
 
 public class Singleton {
     private volatile static Singleton single;

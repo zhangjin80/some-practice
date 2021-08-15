@@ -1,7 +1,8 @@
-package practice;
+package link_array_string;
 
 /**
  * 查找子串
+ * 实现：
  * i从0开始一直到数组主串长度-子串长度为止
  * 如果第一个字符和第一个字符相等才进行第二层循环比较
  * j从0开始，主串的从i+j开始

@@ -1,4 +1,4 @@
-package interview;
+package candidates_code;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,4 +1,4 @@
-package interview;
+package candidates_code;
 
 import com.google.common.collect.Lists;
 import org.apache.commons.io.FileUtils;
