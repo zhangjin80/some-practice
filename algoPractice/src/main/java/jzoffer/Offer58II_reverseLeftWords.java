@@ -1,7 +1,7 @@
 package jzoffer;
 
 /**
- * 把字符串前n为的子串移动到末尾
+ * 把字符串前n位的子串移动到末尾
  */
 public class Offer58II_reverseLeftWords {
     public String reverseLeftWords1(String s, int n) {
