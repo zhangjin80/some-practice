@@ -3,6 +3,7 @@ package recursive;
 import bitree.TreeNode;
 
 /**
+ * 二叉树中的最大路径和
  * @author zhangjin
  * @date 2021-08-10 18:01
  * goto https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/
