@@ -12,6 +12,23 @@ package recursive;
 public class MaxSubArray {
     static int maxSum = Integer.MIN_VALUE;
 
+
+    public static int getMaxSubArraySum(int[] num) {
+        int maxSub = num[0];
+        int preSum = num[0];
+        for (int i = 1; i < num.length; i++) {
+            preSum = Math.max(preSum + num[i], num[i]);
+            maxSub = Math.max(maxSub, preSum);
+        }
+        return maxSub;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {-1,-1,2};
+        System.out.println(getMaxSubArraySum(arr));
+    }
+
+
     public static int maxSubArray(int[] nums) {
         helper(nums, nums.length - 1);
         return maxSum;
@@ -26,11 +43,6 @@ public class MaxSubArray {
         final int curSum = preMaxSum + nums[i];
         maxSum = Math.max(curSum, maxSum);
         return curSum;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {-1,-1,1,1,-2,3,3,4,-4};
-        System.out.println(maxSubArray(nums));
     }
 
 }
