@@ -13,6 +13,11 @@ public class MaxSubArray {
     static int maxSum = Integer.MIN_VALUE;
 
 
+    /**
+     * 动态规划求法
+     * @param num
+     * @return
+     */
     public static int getMaxSubArraySum(int[] num) {
         int maxSub = num[0];
         int preSum = num[0];
@@ -23,12 +28,11 @@ public class MaxSubArray {
         return maxSub;
     }
 
-    public static void main(String[] args) {
-        int[] arr = {-1,-1,2};
-        System.out.println(getMaxSubArraySum(arr));
-    }
-
-
+    /**
+     * 递归求法
+     * @param nums
+     * @return
+     */
     public static int maxSubArray(int[] nums) {
         helper(nums, nums.length - 1);
         return maxSum;
@@ -43,6 +47,11 @@ public class MaxSubArray {
         final int curSum = preMaxSum + nums[i];
         maxSum = Math.max(curSum, maxSum);
         return curSum;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {-1,-1,2};
+        System.out.println(getMaxSubArraySum(arr));
     }
 
 }
