@@ -4,7 +4,8 @@ package recursive;
  * @Author: zhangjin
  * @Date: 2021/09/04/10:37 上午
  * @Modify: 2021/09/04/10:37 上午
- * @Description: 最小路径和：goto https://leetcode-cn.com/problems/minimum-path-sum/submissions/
+ * @Description: 求矩阵最小路径和：
+ * goto https://leetcode-cn.com/problems/minimum-path-sum/submissions/
  */
 public class MinPathSum {
     public int getMinPathSum(int[][] arr) {
