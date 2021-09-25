@@ -6,6 +6,7 @@ import java.util.Stack;
 /**
  * @author zhangjin
  * @date 2021-09-19 17:07
+ * 用两个栈模拟队列
  */
 class CQueue {
     Stack<Integer> appendStack;
