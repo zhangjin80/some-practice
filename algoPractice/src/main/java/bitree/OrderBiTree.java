@@ -105,10 +105,44 @@ public class OrderBiTree {
     }
 
     /**
-     * 非递归中序遍历
-     *
-     * @param head
+     * 非递归后序遍历
+     * @param root
+     * @return
      */
+    public List<Integer> posOrderUnRecur2(TreeNode root) {
+        ArrayList<Integer> re = new ArrayList<>();
+        if (root == null) {
+            return re;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cur = root;
+        TreeNode prev = null;
+        stack.push(cur);
+        while (!stack.isEmpty() || cur != null) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.peek();
+            if (cur.right == null || cur.right == prev) {
+                stack.pop();
+                re.add(cur.val);
+                prev = cur;
+                cur = null;
+            }else {
+                cur = cur.right;
+            }
+
+        }
+        return re;
+    }
+
+
+        /**
+         * 非递归中序遍历
+         *
+         * @param head
+         */
     public List<Integer> inOrderUnRecur(TreeNode head) {
         ArrayList<Integer> re = new ArrayList<>();
 
