@@ -1,5 +1,6 @@
 package bitree;
 
+import bitree.util.TreeUtil;
 import com.google.common.collect.Lists;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,7 +14,7 @@ public class OrderBiTreeTest {
 
     public OrderBiTreeTest() {
         Integer[] arr = {1, 2, 3, 4, 5, 6, 7};
-        this.head = TreeNode.createBinaryTreeByArray(arr);
+        this.head = TreeUtil.createBinaryTreeByArray(arr);
     }
 
     @Test

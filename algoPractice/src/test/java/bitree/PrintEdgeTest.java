@@ -1,5 +1,6 @@
 package bitree;
 
+import bitree.util.TreeUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class PrintEdgeTest {
                 null, null, null, null, null, null, null, 11, 12, null, null, null, null, null, null, null,
                 null, null, null, null, null, null, null, null, null, null, null, null, null, null, 13, 14, 15, 16, null, null, null, null, null, null, null, null, null, null, null, null, null, null
         };
-        this.head = TreeNode.createBinaryTreeByArray(arr);
+        this.head = TreeUtil.createBinaryTreeByArray(arr);
         printEdge = new PrintEdge();
     }
 

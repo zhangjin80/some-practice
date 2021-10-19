@@ -1,5 +1,6 @@
 package bitree;
 
+import bitree.util.TreeUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -64,9 +65,8 @@ public class SumFromRootToLeaf {
     @Test
     public void test() {
         Integer[] arr1 = {4, 9, 0, 5, 1};
-        TreeNode binaryTreeByArray = TreeNode.createBinaryTreeByArray(arr1);
+        TreeNode binaryTreeByArray = TreeUtil.createBinaryTreeByArray(arr1);
         int sumFromRootToLeaf = dfs(binaryTreeByArray);
         Assert.assertEquals(sumFromRootToLeaf, 1026);
-
     }
 }
