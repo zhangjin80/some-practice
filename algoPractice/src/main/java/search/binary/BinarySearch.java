@@ -4,7 +4,7 @@ public class BinarySearch {
     public static int binarySearch(int[] arr, int target) {
         int low = 0;
         int high = arr.length - 1;
-        while (low < high) {
+        while (low <= high) {
             int mid = low + (high - low) / 2;
             if (arr[mid] == target) {
                 return mid;
@@ -21,6 +21,7 @@ public class BinarySearch {
 
     /**
      * ●　查找第一个满足条件的元素，例如查找第一个大于或等于x的元素。
+     *
      * @param arr
      * @param target
      * @return
@@ -30,10 +31,10 @@ public class BinarySearch {
         int start = 0;
         int end = arr.length - 1;
 
-        while (start < end) {
+        while (start <= end) {
             int mid = start + (end - start) / 2;
             if (start == end) {
-                break;
+                return arr[start];
             }
             if (arr[mid] >= target) {
                 end = mid;
@@ -41,10 +42,7 @@ public class BinarySearch {
                 start = mid + 1;
             }
         }
-
-        return arr[start];
-
-
+        return -1;
     }
 
     /**
@@ -57,7 +55,7 @@ public class BinarySearch {
     public static int lastLowValue(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
-        while (start < end) {
+        while (start <= end) {
             int mid = start + (end - start) / 2;
             if (start == end || start + 1 == end) {
                 break;
