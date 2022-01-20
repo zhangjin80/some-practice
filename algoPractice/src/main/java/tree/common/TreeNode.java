@@ -1,4 +1,4 @@
-package bitree;
+package tree.common;
 
 import lombok.ToString;
 

@@ -1,6 +1,7 @@
-package bitree;
+package tree;
 
-import bitree.util.TreeUtil;
+import tree.common.TreeNode;
+import tree.common.TreeUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,6 @@
-package bitree;
+package tree;
+
+import tree.common.TreeNode;
 
 /**
  * 打印二叉树的边界节点

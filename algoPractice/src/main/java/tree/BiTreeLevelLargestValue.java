@@ -1,6 +1,6 @@
-package bitree;
+package tree;
 
-import bitree.TreeNode;
+import tree.common.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

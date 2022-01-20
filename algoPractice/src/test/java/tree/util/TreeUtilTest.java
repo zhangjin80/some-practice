@@ -1,7 +1,7 @@
-package bitree.util;
+package tree.util;
 
-import bitree.TreeNode;
-import bitree.TreeSerializeDeserialize;
+import tree.common.TreeNode;
+import tree.TreeSerializeDeserialize;
 import org.junit.Test;
 
 /**

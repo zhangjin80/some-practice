@@ -1,4 +1,4 @@
-package bitree;
+package tree;
 
 /**
  * 把二叉树的左右节点交换

@@ -1,4 +1,6 @@
-package bitree;
+package tree;
+
+import tree.common.TreeNode;
 
 import java.util.*;
 

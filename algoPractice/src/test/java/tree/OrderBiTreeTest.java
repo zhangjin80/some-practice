@@ -1,9 +1,10 @@
-package bitree;
+package tree;
 
-import bitree.util.TreeUtil;
+import tree.common.TreeUtil;
 import com.google.common.collect.Lists;
 import org.junit.Assert;
 import org.junit.Test;
+import tree.common.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

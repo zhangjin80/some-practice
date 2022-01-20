@@ -1,6 +1,4 @@
-package bitree.util;
-
-import bitree.TreeNode;
+package tree.common;
 
 /**
  * @Author: zhangjin

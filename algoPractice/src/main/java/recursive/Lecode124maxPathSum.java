@@ -1,6 +1,6 @@
 package recursive;
 
-import bitree.TreeNode;
+import tree.common.TreeNode;
 
 /**
  * 二叉树中的最大路径和
