@@ -1,8 +1,6 @@
-package tree.offer.order;
+package tree.offer.bfs;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @Author: zhangjin

@@ -1,4 +1,4 @@
-package tree.offer.order;
+package tree.offer.bfs;
 
 import org.junit.Assert;
 import org.junit.Test;

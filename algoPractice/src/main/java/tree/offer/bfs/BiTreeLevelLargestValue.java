@@ -1,4 +1,4 @@
-package tree;
+package tree.offer.bfs;
 
 import tree.common.TreeNode;
 
@@ -39,7 +39,7 @@ public class BiTreeLevelLargestValue {
     }
 
     /**
-     * 方法二：
+     * 方法二：使用两个标记的size实现
      * @param root
      * @return
      */
@@ -74,4 +74,35 @@ public class BiTreeLevelLargestValue {
         }
         return result;
     }
+
+    /**
+     * 方法三：使用两个队列实现
+     */
+    public List<Integer> largestValue3(TreeNode root) {
+        Queue<TreeNode> q1 = new LinkedList<>();
+        Queue<TreeNode> q2 = new LinkedList<>();
+        if (root != null) {
+            q1.offer(root);
+        }
+        List<Integer> result = new LinkedList<>();
+        int curLevelMaxValue = Integer.MIN_VALUE;
+        while (!q1.isEmpty()) {
+            TreeNode node = q1.poll();
+            curLevelMaxValue = Math.max(node.val, curLevelMaxValue);
+            if (node.left != null) {
+                q2.offer(node.left);
+            }
+            if (node.right != null) {
+                q2.offer(node.right);
+            }
+            if (q1.isEmpty()) {
+                result.add(curLevelMaxValue);
+                curLevelMaxValue = Integer.MIN_VALUE;
+                q1 = q2;
+                q2 = new LinkedList<>();
+            }
+        }
+        return result;
+    }
+
 }
