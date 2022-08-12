@@ -43,7 +43,6 @@ public class CD7ReverseStack {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<Integer>();
         stack.addAll(Lists.newArrayList(3, 2, 1));
-        getAndRemoveLastElement(null);
         System.out.println(stack);
         reverseStack(stack);
         System.out.println(stack);
